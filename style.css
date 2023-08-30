@@ -23,6 +23,7 @@
 body {
   font-size: 18px;
   font-family: "Epilogue";
+  background-color: var(--c-almostWhite);
 }
 
 /* Navbar Mobile */
@@ -37,11 +38,10 @@ body {
   align-items: center;
   padding: 0 15px;
   margin: 0 auto;
-  z-index: 1;
   position: relative;
 }
 
-.navbar-menu-mobile {
+.navbar-menu {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -51,22 +51,22 @@ body {
   width: 0vw;
   overflow: hidden;
   background-color: var(--c-almostWhite);
-  z-index: 500;
   transition: width 0.3s ease;
   transition: visibility 0.3s ease;
   visibility: collapse;
 }
 
-.navbar-menu-mobile * {
+.navbar-menu * {
   color: var(--c-mediumGray);
 }
 
-.navbar-menu-mobile.navbar-active {
+.navbar-menu.navbar-active {
   visibility: visible;
   width: 65%;
   transition: width 0.3s ease;
   padding: 20px;
-  z-index: 700;
+  z-index: 999;
+  position: fixed;
 }
 
 .accordion {
@@ -133,7 +133,7 @@ a {
 }
 
 .black {
-  visibility: collapse;
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -141,7 +141,7 @@ a {
   height: 100vh;
   background-color: black;
   opacity: 0;
-  z-index: 600;
+  z-index: 1;
   transition: all 0.3s ease;
 }
 
@@ -149,6 +149,13 @@ a {
   visibility: visible;
   transition: all 0.3s ease;
   opacity: 0.5;
+  position: fixed;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .login,
@@ -218,11 +225,12 @@ a {
 .learnmore-btn {
   height: 35px;
   width: 100px;
-  border-radius: 9px;
+  border-radius: 15px;
   border: solid 1px black;
   background-color: var(--c-almostBlack);
   color: var(--c-almostWhite);
   margin-bottom: 50px;
+  cursor: pointer;
 }
 
 .clients {
@@ -234,4 +242,130 @@ a {
 
 .client {
   width: 60px;
+}
+
+/* Desktop Version */
+
+@media screen and (min-width: 1200px) {
+  
+  /* Desktop navbar*/
+
+  .navbar {
+    max-width: none;
+    padding: 20px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 40px;
+  }
+
+  .navbar-menu {
+    flex-direction: row;
+    position: initial;
+    height: 100%;
+    width: 100%;
+    transition: none;
+    visibility: initial;
+    justify-content: space-between;
+    margin-left: 50px;
+  }
+
+  .navbar-item {
+    position: relative;
+    overflow: visible;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 70px;
+    background-color: red;
+    overflow: initial;
+    overflow: visible;
+  }
+
+  .accordion {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .btn-container {
+    flex-direction: row;
+  }
+
+  .login,
+  .register {
+    height: 100%;
+    width: 100px;
+    margin: none;
+  }
+
+  /* Desktop main*/
+
+  .hero-img-desktop {
+    display: block;
+    width: 450px;
+  }
+
+  .hero-img-mobile {
+    display: none;
+  }
+
+  .main {
+    flex-direction: row-reverse;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .content {
+    max-width: none;
+    text-align: left;
+    height: 600px;
+    padding: 100px 100px 0 20px;
+  }
+
+  .paragraph {
+    margin: 0;
+    width: 420px;
+  }
+
+  .content * {
+    margin-bottom: 50px;
+  }
+
+  .main-title {
+    font-size: 5rem;
+    word-wrap: break-word;
+    width: 540px;
+  }
+
+  .learnmore-btn {
+    height: 50px;
+    width: 150px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+  }
+
+  .learnmore-btn:hover {
+    background-color: var(--c-almostWhite);
+    color: var(--c-almostBlack);
+    transition: all 0.3s ease;
+  }
+
+  .clients {
+    justify-content: flex-start;
+    gap: 50px;
+  }
+
+  .client {
+    width: 100px;
+  }
 }
