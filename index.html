@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="black"></div>
+    <nav>
+      <div class="navbar">
+        <img class="logo" src="images/logo.svg" alt="Snap logo" />
+        <img
+          class="burger"
+          src="images/icon-menu.svg"
+          alt="A burger menu icon" />
+      </div>
+      <div class="navbar-menu-mobile">
+        <img
+          id="burger-close"
+          class="burger"
+          src="images/icon-close-menu.svg"
+          alt="close menu button" />
+
+        <!---------------------------------------------------->
+
+        <ul class="accordion">
+          <li class="navbar-item">
+            <p class="navbar-label">
+              Features<img
+                class="arrow-down"
+                src="images/icon-arrow-down.svg" />
+            </p>
+            <ul class="dropdown">
+              <li class="dropdown-item">
+                <img
+                  class="inline-icon"
+                  src="images/icon-todo.svg"
+                  alt="A to do list" />
+                Todo List
+              </li>
+              <li class="dropdown-item">
+                <img
+                  class="inline-icon"
+                  src="images/icon-calendar.svg"
+                  alt="A calendar icon" />
+                Calendar
+              </li>
+              <li class="dropdown-item">
+                <img
+                  class="inline-icon"
+                  src="images/icon-reminders.svg"
+                  alt="A reminders icon" />
+                Reminders
+              </li>
+              <li class="dropdown-item">
+                <img
+                  class="inline-icon"
+                  src="images/icon-planning.svg"
+                  alt="A planning icon" />
+                Planning
+              </li>
+            </ul>
+          </li>
+          <!--------------------------------------------------->
+          <li class="navbar-item">
+            <p class="navbar-label">
+              Company<img class="arrow-down" src="images/icon-arrow-down.svg" />
+            </p>
+            <ul class="dropdown">
+              <p>History</p>
+              <p>Our Team</p>
+              <p>Blog</p>
+            </ul>
+          </li>
+          <!--------------------------------------------------->
+          <li class="navbar-item"><a href="#">Careers</a></li>
+          <li class="navbar-item"><a href="#">About</a></li>
+        </ul>
+        <button class="login">Login</button>
+        <button class="register">Register</button>
+      </div>
+    </nav>
+
+    <!-- Main -->
+
+    <main class="main">
+      <img
+        class="hero-img-mobile"
+        src="images/image-hero-mobile.png"
+        alt="the main image of a DJ" />
+      <img
+        class="hero-img-desktop"
+        src="images/image-hero-desktop.png"
+        alt="the main image of a DJ" />
+      <section class="content">
+        <h1 class="main-title">Make remote work</h1>
+        <p class="paragraph">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="learnmore-btn">Learn more</button>
+        <div class="clients">
+          <img
+            class="client"
+            src="images/client-databiz.svg"
+            alt="Image of the databiz client" />
+          <img
+            class="client"
+            src="images/client-audiophile.svg"
+            alt="Image of the audiophile client" />
+          <img
+            class="client"
+            src="images/client-meet.svg"
+            alt="Image of the meet client" />
+          <img
+            class="client"
+            src="images/client-maker.svg"
+            alt="Image of the marker client" />
+        </div>
+      </section>
+    </main>
+
+    <!-- Features Company Careers About Login Register -->
+    <script src="main.js"></script>
+  </body>
+</html>
